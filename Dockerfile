@@ -65,11 +65,11 @@ RUN apt update && apt upgrade -y && \
 RUN pip3 install --upgrade pip setuptools
 
 # Copy Python Requirements to /root/DaisyX
-RUN git clone -b shiken https://github.com/Infinity-Bots/LizaDaisyX /root/DaisyX
-WORKDIR /root/DaisyX
+RUN git clone -b shiken https://github.com/gizako/Daisy-OLD /root/Daisy-OLD
+WORKDIR /root/Daisy-OLD
 
-#Copy config file to /root/DaisyX/DaisyX
-COPY ./DaisyX/sample_config.py ./DaisyX/config.py* /root/DaisyX/DaisyX/
+#Copy config file to /root/Daisy-OLD/DaisyX
+COPY ./DaisyX/sample_config.py ./DaisyX/config.py* /root/Daisy-OLD/DaisyX/
 
 ENV PATH="/home/bot/bin:$PATH"
 
